@@ -24,6 +24,10 @@
   --box-shadow-color: rgba(0, 0, 0, 0.3);
   --header-font-weight: 600;
   --body-font-size: 17px;
+  --h1-font-size: 40px;
+  --h2-font-size: 30px;
+  --standard-line-height: 1;
+  --standard-element-padding: 20px;
 }
 
 * {
@@ -33,7 +37,7 @@
 body {
   font-family: 'Libre Franklin', sans-serif;
   font-size: var(--body-font-size);
-  line-height: 1;
+  line-height: var(--standard-line-height);
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -41,20 +45,20 @@ body {
 h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: var(--header-font-weight);
-  font-size: 40px;
-  line-height: 1;
+  font-size: var(--h1-font-size);
+  line-height: var(--standard-line-height);
   color: var(--primary-color);
 }
 
 .h1__indent {
-  padding-left: 20px;
+  padding-left: var(--standard-element-padding);
 }
 
 h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: var(--header-font-weight);
-  font-size: 30px;
-  line-height: 1;
+  font-size: var(--h2-font-size);
+  line-height: var(--standard-line-height);
   color: var(--primary-color);
 }
 
@@ -91,7 +95,7 @@ a:active {
 .page-header {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: var(--standard-element-padding);
   justify-content: space-around;
   align-items: center;
   border-bottom:1px solid var(--compliment-color);
@@ -128,7 +132,7 @@ a:active {
 .profile {
   max-width: 60vw;
   margin: 10vh auto; 
-  padding: 20px;
+  padding: var(--standard-element-padding);
 }
 
 .profile__portrait {
@@ -138,6 +142,7 @@ a:active {
   border-radius: 50%;
 } 
 
+/*Style this and then think about variables*/
 .contact-message {
   display: flex;
   flex-flow: row, wrap;
@@ -172,7 +177,7 @@ a:active {
 
 /*use this class again and change the name if other single buttons are added*/
 .cv-button {
-  padding: 20px;
+  padding: var(--standard-element-padding);
 }
 
 /* start grid fallback */
@@ -195,7 +200,7 @@ a:active {
     border-radius: 10px;
     width: auto;
     min-height: auto;
-    padding: 20px;
+    padding: var(--standard-element-padding);
   }
 
   .grid__item:first-child {
@@ -299,7 +304,7 @@ a:active {
     align-items: center;
     max-width: 80vw;
     margin: 3vh auto; 
-    padding: 20px;
+    padding: var(--standard-element-padding);
   }
   
   .profile__portrait {
