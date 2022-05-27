@@ -71,7 +71,7 @@ a:hover, a:focus {
 }
 
 a:active {
-color: #3A0014;
+  color: #3A0014;
 }
 
 /* to cancel the effects of the <a> transition on buttons*/
@@ -144,6 +144,7 @@ color: #3A0014;
   border-radius: 50%;
 } 
 
+/*Style this and then think about variables*/
 .contact-message {
   display: -webkit-box;
   display: -ms-flexbox;
