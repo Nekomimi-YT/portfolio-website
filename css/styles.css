@@ -299,7 +299,7 @@ textarea {
   }
 
   textarea {
-    width:250px;
+    width: 100vw;
   }
 }
 
@@ -318,7 +318,7 @@ textarea {
   }
 
   textarea {
-    width:400px;
+    width: 425px;
   }
  }
 
