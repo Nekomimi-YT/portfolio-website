@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;1,300&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.production.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
   </head>
 
   <body>
@@ -46,19 +46,19 @@
           <p>
             <label for="email" class="standard-label">*Email:</label>
           </p>
-          <input type="email" id="email" name="email" required/>
+          <input type="email" id="email" name="email" class="contact-form__item_style" required />
         </div>
         <div class="contact-form__item">
           <p>
             <label for="phone-number" class="standard-label">Telephone number:</label>
           </p>
-          <input type="tel" id="phone-number" name="phone-number" />
+          <input type="tel" id="phone-number" name="phone-number" class="contact-form__item_style" />
         </div>
         <div class="contact-form__item">
           <p>
             <label for="message" class="standard-label">*Message:</label>
           </p>
-          <textarea id="message" rows="10" maxlength="240" name="message" required></textarea>
+          <textarea id="message" rows="10" maxlength="240" name="message" class="contact-form__item_style" required></textarea>
         </div>
         <div class="contact-form__item">
           <input type="submit" value="Send Message" class="button-hover"/>
