@@ -160,6 +160,13 @@ a:active {
   margin-top: 10px;
 }
 
+.contact-form__item_style {
+  border-radius: 5px;
+  padding: 4px;
+  border: 1px solid var(--primary-color);
+  color: var(--compliment-color)
+}
+
 /*combined button and input attribute selector into one*/
 .button, input[type="submit"] {
   border: none;
