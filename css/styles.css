@@ -171,6 +171,10 @@ a:active {
   outline-color: var(--secondary-color);
 }
 
+textarea {
+  width: 500px;
+}
+
 /*combined button and input attribute selector into one*/
 .button, input[type="submit"] {
   border: none;
