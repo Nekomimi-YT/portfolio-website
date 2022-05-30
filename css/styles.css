@@ -294,7 +294,7 @@ textarea {
   body {
     font-size: 16px;
   }
-  
+
   h1 {
     font-size: 35px;
   }
@@ -304,7 +304,7 @@ textarea {
   }
 
   textarea {
-    width: 100vw;
+    width: 85vw;
   }
 }
 
