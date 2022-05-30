@@ -167,6 +167,10 @@ a:active {
   color: var(--compliment-color)
 }
 
+.contact-form__item_style:focus {
+  outline-color: var(--secondary-color);
+}
+
 /*combined button and input attribute selector into one*/
 .button, input[type="submit"] {
   border: none;
