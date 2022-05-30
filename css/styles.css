@@ -145,9 +145,10 @@ a:active {
 /*Style this and then think about variables*/
 .contact-message {
   display: flex;
-  flex-flow: row, wrap;
-  width: 40vw;
-  margin-left: 20px;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  border: none;
 }
 
 .contact-information {
