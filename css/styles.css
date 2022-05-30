@@ -303,6 +303,10 @@ textarea {
     font-size: 25px;
   }
 
+  .profile__portrait {
+    width: 200px;
+  } 
+
   textarea {
     width: 85vw;
   }
