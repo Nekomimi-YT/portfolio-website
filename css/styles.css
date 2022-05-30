@@ -290,6 +290,11 @@ textarea {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
+  body {
+    font-size: 16px;
+  }
+  
   h1 {
     font-size: 35px;
   }
