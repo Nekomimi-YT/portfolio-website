@@ -298,6 +298,9 @@ textarea {
     font-size: 25px;
   }
 
+  textarea {
+    width:250px;
+  }
 }
 
  /*added a media query for the nav: max-width 650px.  Need to change for max-width 500*/
@@ -312,6 +315,10 @@ textarea {
     flex-basis: 175px;
     flex-grow: 0;
     text-align: left;
+  }
+
+  textarea {
+    width:400px;
   }
  }
 
