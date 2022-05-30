@@ -156,6 +156,10 @@ a:active {
   margin-top: 20px;
 }
 
+.contact-form__item {
+  margin-top: 10px;
+}
+
 /*combined button and input attribute selector into one*/
 .button, input[type="submit"] {
   border: none;
