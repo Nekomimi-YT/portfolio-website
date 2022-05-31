@@ -142,12 +142,11 @@ a:active {
   border-radius: 50%;
 } 
 
-/*Style this and then think about variables*/
 .contact-message {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 20px;
+  padding: var(--standard-element-padding);
   border: none;
 }
 
