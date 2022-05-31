@@ -28,6 +28,9 @@
   --h2-font-size: 30px;
   --standard-line-height: 1;
   --standard-element-padding: 20px;
+  --grid-gap: 10px;
+  --grid-border-radius: 10px;
+  --grid-margin: 20px 0 20px 0;
 }
 
 * {
@@ -217,13 +220,13 @@ textarea {
   .grid {
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
-    margin: 0 20px 0 20px;
+    grid-gap: var(--grid-gap);
+    margin: var(--grid-margin);
   }
 
   .grid__item {
     background-color: var(--secondary-compliment-color);
-    border-radius: 10px;
+    border-radius: var(--grid-border-radius);
     width: auto;
     min-height: auto;
     padding: var(--standard-element-padding);
@@ -238,15 +241,15 @@ textarea {
   .small-grid {
     display:grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
-    margin: 0 20px 0 20px;
+    grid-gap: var(--grid-gap);
+    margin: var(--grid-margin);
     align-items: center;
     text-align: center;
   }
 
   .small-grid__item {
     background-color: var(--secondary-compliment-color);
-    border-radius: 10px;
+    border-radius: var(--grid-border-radius);
     width: auto;
     min-height: auto;
     padding: var(--standard-element-padding);
