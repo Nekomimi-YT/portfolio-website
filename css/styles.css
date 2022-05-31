@@ -198,6 +198,8 @@ textarea {
 /*use this class again and change the name if other single buttons are added*/
 .cv-button {
   padding: var(--standard-element-padding);
+  text-align: center;
+  margin: 15px 0 10px 0;
 }
 
 /* start grid fallback */
