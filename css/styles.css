@@ -254,6 +254,31 @@ textarea {
   }
 }
 
+/*grid animation begins here*/
+
+@keyframes grid-flip {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.small-grid__item:hover, .small-grid__item:focus {
+  animation: 
+      .5s grid-flip 1 normal linear;
+}
+
 /*plant animation begins here*/
 
 .plant-container {
