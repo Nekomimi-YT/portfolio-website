@@ -56,9 +56,9 @@ h2 {
 a {
   color: #9B0E40;
   text-decoration: none;
-  -webkit-transition: font-size .7s;
-  -o-transition: font-size .7s;
-  transition: font-size .7s; font-weight: .7s;
+  -webkit-transition: font-size .7s, font-weight .7s;
+  -o-transition: font-size .7s, font-weight .7s;
+  transition: font-size .7s, font-weight .7s;
 }
 
 a:visited {
@@ -252,7 +252,7 @@ input[type="submit"] {
     display:grid;
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
+    gap: 10px;
     margin: 0 20px 0 20px;
   }
 
@@ -277,7 +277,7 @@ input[type="submit"] {
     display:grid;
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
+    gap: 10px;
     margin: 0 20px 0 20px;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -444,7 +444,7 @@ input[type="submit"] {
 
 @media only screen and (min-width: 600px) {
   .small-grid {
-    -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+    -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4,1fr);
   }
 }
@@ -487,7 +487,6 @@ input[type="submit"] {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
   }
 
   .grid__item:first-child {
@@ -523,7 +522,7 @@ input[type="submit"] {
 
  @media only screen and (min-width: 1200px) {
   .small-grid {
-    -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+    -ms-grid-columns: (1fr)[8];
     grid-template-columns: repeat(8,1fr);
   }
  }
