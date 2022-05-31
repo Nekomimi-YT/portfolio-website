@@ -330,9 +330,19 @@ textarea {
   text-align: center;
 }
 
- /*added a media query for the nav: max-width 650px.  Need to change for max-width 500*/
- @media all and (max-width: 650px) {
-  
+ @media all and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
   .navigation-list li {
   display: block;
   margin-left: 15px;
@@ -344,8 +354,22 @@ textarea {
     text-align: left;
   }
 
+  .profile__portrait {
+    width: 200px;
+  } 
+
   textarea {
-    width: 425px;
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid__item:first-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
   }
  }
 
