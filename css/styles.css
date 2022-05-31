@@ -379,7 +379,6 @@ textarea {
   }
  }
 
-/*I'm aware that the <span> element is messing with the <p> centering...*/
  @media all and (max-width: 820px) {
   .profile {
     display: flex;
