@@ -69,7 +69,7 @@ h2 {
 a {
   color: var(--secondary-color);
   text-decoration: none;
-  transition: font-size .7s; font-weight: .7s;
+  transition: font-size .7s, font-weight .7s;
 }
 
 a:visited {
