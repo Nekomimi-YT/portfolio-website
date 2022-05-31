@@ -379,7 +379,7 @@ textarea {
   }
  }
 
- @media all and (max-width: 820px) {
+ @media all and (max-width: 768px) {
   .profile {
     display: flex;
     flex-direction: column;
@@ -397,7 +397,11 @@ textarea {
   } 
  }
 
-
+ @media only screen and (min-width: 1200px) {
+  .small-grid {
+    grid-template-columns: repeat(8,1fr);
+  }
+  
 /*possible future nav intermediary
 @media all and (max-width: 650px) {
  
