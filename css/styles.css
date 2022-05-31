@@ -22,6 +22,7 @@
   --background-color: #E7EBE3;
   --a-color__active: #3A0014;
   --box-shadow-color: rgba(0, 0, 0, 0.3);
+  --input-background-color: #FFF8FB;
   --header-font-weight: 600;
   --body-font-size: 17px;
   --h1-font-size: 40px;
@@ -167,7 +168,7 @@ a:active {
   padding: 4px;
   border: 1px solid var(--compliment-color);
   color: var(--text-color);
-  background-color: var(--secondary-compliment-color);
+  background-color: var(--input-background-color);
 }
 
 .contact-form__item_style:focus {
