@@ -236,12 +236,6 @@ textarea {
     grid-row: 1 / 3;
   }
 
-  .page-footer {
-    clear: both;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 /*plant animation begins here*/
@@ -287,6 +281,13 @@ textarea {
   animation-direction: normal;
   animation-timing-function: linear;
   */
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
 @media all and (max-width: 500px) {
   .grid {
