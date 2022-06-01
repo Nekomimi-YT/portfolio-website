@@ -115,12 +115,10 @@ a:active {
   border:2px solid var(--compliment-color);
 }
 
-/*NOT the last child OF .ph__i.  Instead: ph__i that IS the last child.*/
+
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
-  /* justify-content does not work here, because the ".page_header display:flex" only applies to the <img> and the <ul>, NOT the
-  <li> items in the <ul>.  I would need to add "display:flex" here to use content alignment properties */
 }
 
 .navigation-list {
