@@ -390,6 +390,24 @@ textarea {
   } 
  }
 
+ @media only screen and (min-width: 992px) {
+  .contact-page-container {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .contact-message {
+    width: 40%;
+  }
+
+  .contact-information {
+    padding-top: 5%;
+    width: 60%;
+    text-align: center;
+  }
+}
+
  @media only screen and (min-width: 1200px) {
   .small-grid {
     grid-template-columns: repeat(8,1fr);
