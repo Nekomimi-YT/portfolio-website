@@ -82,9 +82,8 @@ a:active {
 
 /*nav  a.current {
   color: #3A0014;
-} Need Javascript to compare the current page to the nav? */
+} Need Javascript to compare the current page to the nav */
 
-/* supposed to center <nav> text to logo. But not anymore*/
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,14 +111,20 @@ a:active {
   border:2px solid #817277;
 }
 
-/*NOT the last child OF .ph__i.  Instead: ph__i that IS the last child.*/
+/*Centering the nav with the logo photo*/
 .page-header__item:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  text-align: right;
-  /* justify-content does not work here, because the ".page_header display:flex" only applies to the <img> and the <ul>, NOT the
-  <li> items in the <ul>.  I would need to add "display:flex" here to use content alignment properties */
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation-list {
@@ -177,6 +182,7 @@ a:active {
 .contact-form__item_style:focus {
   outline-color: #9B0E40;
   outline-width: 1px;
+  outline-style: solid;
 }
 
 textarea {
@@ -454,6 +460,17 @@ input[type="submit"] {
     font-size: 25px;
   }
 
+  .page-header {
+    padding: 10px;
+  }
+  
+  .page-header__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 75px;
+            flex: 0 1 75px;
+    height: 75px;
+  }
+  
   .navigation-list li {
   display: block;
   margin-left: 15px;
