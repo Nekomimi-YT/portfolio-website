@@ -115,10 +115,12 @@ a:active {
   border:2px solid var(--compliment-color);
 }
 
-
+/*Centering the nav with the logo photo*/
 .page-header__item:last-child {
+  display: flex;
   flex-grow: 1;
-  text-align: right;
+  justify-content: right;
+  align-items: center;
 }
 
 .navigation-list {
