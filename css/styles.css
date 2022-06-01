@@ -352,6 +352,11 @@ textarea {
     padding: 10px;
   }
   
+  .page-header__item {
+    flex: 0 1 75px;
+    height: 75px;
+  }
+  
   .navigation-list li {
   display: block;
   margin-left: 15px;
