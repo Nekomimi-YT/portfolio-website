@@ -348,6 +348,10 @@ textarea {
     font-size: 25px;
   }
 
+  .page-header {
+    padding: 10px;
+  }
+  
   .navigation-list li {
   display: block;
   margin-left: 15px;
