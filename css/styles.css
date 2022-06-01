@@ -93,9 +93,8 @@ a:active {
 
 /*nav  a.current {
   color: #3A0014;
-} Need Javascript to compare the current page to the nav? */
+} Need Javascript to compare the current page to the nav */
 
-/* supposed to center <nav> text to logo. But not anymore*/
 .page-header {
   display: flex;
   width: 100%;
