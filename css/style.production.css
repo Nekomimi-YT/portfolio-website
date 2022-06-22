@@ -1,7 +1,7 @@
 /*
 * Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.12,
-* Autoprefixer: v10.4.4
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
 
@@ -192,6 +192,12 @@ a:active {
 
 textarea {
   width: 500px;
+}
+
+.error-message {
+  font-size: 16px;
+  color: #9B0E40;
+  padding-top: 5px;
 }
 
 /*combined button and input attribute selector into one*/
@@ -545,7 +551,7 @@ input[type="submit"] {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #1E3B00;
+    background: #3E7C00;
   }
 
   .main-navigation .hamburger-lines .line1 {
