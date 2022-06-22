@@ -185,6 +185,12 @@ textarea {
   width: 500px;
 }
 
+.error-message {
+  font-size: 16px;
+  color: var(--secondary-color);
+  padding-top: 5px;
+}
+
 /*combined button and input attribute selector into one*/
 .button, input[type="submit"] {
   border: none;
@@ -417,7 +423,7 @@ textarea {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: var(--text-color);
+    background: var(--primary-color);
   }
 
   .main-navigation .hamburger-lines .line1 {
