@@ -46,6 +46,25 @@ body {
   color: var(--text-color);
 }
 
+/*
+.background-noise {
+  margin: 0;
+  padding: 0;
+  background: url(../img/noisy2.jpg);
+  opacity: 0;
+  transition: opacity 3s;
+  animation: noise .5s steps(20) 2s 7;
+}
+
+@keyframes noise {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30% 30%;
+  }
+}
+*/
 h1 {
   font-family: 'Stardos Stencil', cursive;
   font-weight: var(--header-font-weight);
@@ -59,7 +78,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Stardos Stencil', cursive;
   font-weight: var(--header-font-weight);
   font-size: var(--h2-font-size);
   line-height: var(--standard-line-height);
