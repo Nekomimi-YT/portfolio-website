@@ -421,6 +421,7 @@ textarea {
     background: var(--input-background-color);
     width: 75vw;
     max-width: 300px;
+    list-style-type: none;
     transform: translate(150%);
     transition: transform 0.5s ease-in-out;
     box-shadow: 5px 0px 10px 0px var(--box-shadow-color);
