@@ -33,6 +33,25 @@ body {
   color: #1E3B00;
 }
 
+/*
+.background-noise {
+  margin: 0;
+  padding: 0;
+  background: url(../img/noisy2.jpg);
+  opacity: 0;
+  transition: opacity 3s;
+  animation: noise .5s steps(20) 2s 7;
+}
+
+@keyframes noise {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30% 30%;
+  }
+}
+*/
 h1 {
   font-family: 'Stardos Stencil', cursive;
   font-weight: 600;
@@ -520,6 +539,7 @@ input[type="submit"] {
   
    .main-navigation .navigation-list {
     padding-top: 220px;
+    padding-left: 10px;
     background: #FFF8FB;
     width: 75vw;
     max-width: 300px;
@@ -539,7 +559,7 @@ input[type="submit"] {
 
   .main-navigation .navigation-list li {
     display: block;
-    text-align: left; /* how can i center this!?*/
+    text-align: left;
     margin-right: 0px;
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
@@ -607,18 +627,7 @@ input[type="submit"] {
         -ms-transform: rotate(-35deg);
             transform: rotate(-35deg);
   } 
-  /*
-  .navigation-list li {
-  display: block;
-  margin-left: 15px;
-  }
 
-  .page-header__item:last-child {
-    flex-basis: 175px;
-    flex-grow: 0;
-    text-align: left;
-  }
-*/
   .profile__portrait {
     width: 200px;
   } 
@@ -685,28 +694,3 @@ input[type="submit"] {
     grid-template-columns: repeat(8,1fr);
   }
  }
-
-/*possible future nav intermediary
-@media all and (max-width: 650px) {
- 
-  .page-header {
-    flex-direction: column;
-    height: 200px;
-    padding: 20px 0 20px 0;
-  }
-
-  .page-header__item:first-child {
-    margin-bottom: 10px;
-  }
-
-  .page-header__item:last-child {
-    width: 500px;
-    display: flex;
-    /* Why do I need to use flex here? and then with text-align/ align-items? Why is this child also in columns already?
-    text-align: center;
-  }
-
-  .navigation-list li {
-    margin: none;
-  }
-}*/
