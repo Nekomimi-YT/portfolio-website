@@ -530,28 +530,3 @@ textarea {
     grid-template-columns: repeat(8,1fr);
   }
  }
-
-/*possible future nav intermediary
-@media all and (max-width: 650px) {
- 
-  .page-header {
-    flex-direction: column;
-    height: 200px;
-    padding: 20px 0 20px 0;
-  }
-
-  .page-header__item:first-child {
-    margin-bottom: 10px;
-  }
-
-  .page-header__item:last-child {
-    width: 500px;
-    display: flex;
-    /* Why do I need to use flex here? and then with text-align/ align-items? Why is this child also in columns already?
-    text-align: center;
-  }
-
-  .navigation-list li {
-    margin: none;
-  }
-}*/
