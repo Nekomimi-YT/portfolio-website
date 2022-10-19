@@ -418,10 +418,10 @@ textarea {
   
    .main-navigation .navigation-list {
     padding-top: 220px;
+    padding-left: 10px;
     background: var(--input-background-color);
     width: 75vw;
     max-width: 300px;
-    list-style-type: none;
     transform: translate(150%);
     transition: transform 0.5s ease-in-out;
     box-shadow: 5px 0px 10px 0px var(--box-shadow-color);
@@ -431,7 +431,7 @@ textarea {
 
   .main-navigation .navigation-list li {
     display: block;
-    text-align: left; /* how can i center this!?*/
+    text-align: left;
     margin-right: 0px;
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
@@ -475,18 +475,7 @@ textarea {
   .main-navigation input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-35deg);
   } 
-  /*
-  .navigation-list li {
-  display: block;
-  margin-left: 15px;
-  }
 
-  .page-header__item:last-child {
-    flex-basis: 175px;
-    flex-grow: 0;
-    text-align: left;
-  }
-*/
   .profile__portrait {
     width: 200px;
   } 
