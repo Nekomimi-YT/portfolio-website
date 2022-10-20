@@ -17,6 +17,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+let messagesRef = firebase.database().ref('messages');
 
 
 // ****** Form Validation ******
@@ -109,9 +110,21 @@ function submitForm(e) {
   let email = getInputValue('email');
   let phone = getInputValue('phone-number');
   let message = getInputValue('message');
+
+  messageData(name, email, phone, message);
 }
 
 //get form values without repeating
 function getInputValue(id) {
   return document.getElementById(id).value;
+}
+
+function messageData(name, email, phone, message) {
+  let newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+    email: email,
+    phone: phone,
+    message, message
+  })
 }
