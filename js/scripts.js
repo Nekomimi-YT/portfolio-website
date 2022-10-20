@@ -1,4 +1,25 @@
-//form validation
+// ****** Firebase ******
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAJroDfiS0vd6t7zUgDy8Cyr8rDVeAJJyI",
+  authDomain: "portfolio-contact-form-8413b.firebaseapp.com",
+  projectId: "portfolio-contact-form-8413b",
+  storageBucket: "portfolio-contact-form-8413b.appspot.com",
+  messagingSenderId: "688561707815",
+  appId: "1:688561707815:web:874e6fe8bbe6d39d77e702"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+// ****** Form Validation ******
 
 (function() {
   let form = document.querySelector('#contact-form');
@@ -77,7 +98,8 @@
   messageInput.addEventListener('input', validateMessage);
 })();
 
-// Listening for form submit
+// // ****** Form Submit ******
+
 document.getElementById('contact-form').addEventListener('submit', submitForm);
 
 function submitForm(e) {
