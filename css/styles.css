@@ -169,6 +169,15 @@ a:active {
   border-radius: 50%;
 } 
 
+.contact-page-container {
+  background-color: var(--secondary-compliment-color);
+  box-shadow: 0 0 20px 0 var(--box-shadow-color);
+  border-radius: var(--grid-border-radius);
+  max-width: 90%;
+  margin: auto;
+  padding-top: var(--standard-element-padding);
+}
+
 .contact-message {
   display: flex;
   flex-direction: column;
