@@ -1,3 +1,5 @@
+//form validation
+
 (function() {
   let form = document.querySelector('#contact-form');
   let emailInput = document.querySelector('#email');
@@ -74,3 +76,20 @@
   emailInput.addEventListener('input', validateEmail);
   messageInput.addEventListener('input', validateMessage);
 })();
+
+// Listening for form submit
+document.getElementById('contact-form').addEventListener('submit', submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+
+  let name = getInputValue('name');
+  let email = getInputValue('email');
+  let phone = getInputValue('phone-number');
+  let message = getInputValue('message');
+}
+
+//get form values without repeating
+function getInputValue(id) {
+  return document.getElementById(id).value;
+}
