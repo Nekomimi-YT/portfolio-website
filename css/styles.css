@@ -353,14 +353,6 @@ textarea {
       3s leaf-grow 1 normal linear;
 }
 
- /*
-  animation-duration: 8s;
-  animation-name: leaf-grow;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  */
-
 .page-footer {
   clear: both;
   display: flex;
