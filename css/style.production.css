@@ -1,28 +1,5 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/* Website colors: probably won't use them all! :)
-.color-primary-0 { color: #589F0F }	Main Primary color
-.color-primary-1 { color: #E7EBE3 }
-.color-primary-2 { color: #7D8575 }
-.color-primary-3 { color: #3E7C00 }
-.color-primary-4 { color: #1E3B00 }
-
-.color-complement-0 { color: #9B0E40 }	Main Complement color
-.color-complement-1 { color: #E6DEE1 }
-.color-complement-2 { color: #817277 }
-.color-complement-3 { color: #78002B }
-.color-complement-4 { color: #3A0014 }
-
-*/
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -75,8 +52,6 @@ h2 {
 a {
   color: #9B0E40;
   text-decoration: none;
-  -webkit-transition: font-size .7s, font-weight .7s;
-  -o-transition: font-size .7s, font-weight .7s;
   transition: font-size .7s, font-weight .7s;
 }
 
@@ -104,24 +79,16 @@ a:active {
 } Need Javascript to compare the current page to the nav */
 
 .page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   border-bottom:1px solid #817277;
 }
 
-/*the flex basis alone does not control my image size. I need to add a height to the css*/
 .page-header__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100px;
-          flex: 0 1 100px;
+  flex: 0 1 100px;
   height: 100px;
 }
 
@@ -130,20 +97,12 @@ a:active {
   border:2px solid #817277;
 }
 
-/*Centering the nav with the logo photo*/
+/*Centers the nav with the logo photo*/
 .page-header__item:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-grow: 1;
+  justify-content: right;
+  align-items: center;
 }
 
 .main-navigation input[type="checkbox"],
@@ -173,14 +132,18 @@ a:active {
   border-radius: 50%;
 } 
 
+.contact-page-container {
+  background-color: #E6DEE1;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  max-width: 90%;
+  margin: auto;
+  padding-top: 20px;
+}
+
 .contact-message {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
   padding: 20px;
   border: none;
@@ -219,7 +182,6 @@ textarea {
   padding-top: 5px;
 }
 
-/*combined button and input attribute selector into one*/
 .button {
   border: none;
   display: inline-block;
@@ -229,13 +191,11 @@ textarea {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-  -webkit-transition: background-color .5s;
-  -o-transition: background-color .5s;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
   transition: background-color .5s;
   /*transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
 }
+
 input[type="submit"] {
   border: none;
   display: inline-block;
@@ -245,10 +205,7 @@ input[type="submit"] {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-  -webkit-transition: background-color .5s;
-  -o-transition: background-color .5s;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
   transition: background-color .5s;
   /*transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
 }
@@ -284,9 +241,7 @@ input[type="submit"] {
  
 @supports (display: grid) {
   .grid {
-    display:-ms-grid;
     display:grid;
-    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: repeat(2,1fr);
     gap: 10px;
     margin: 0 20px 0 20px;
@@ -301,15 +256,11 @@ input[type="submit"] {
   }
 
   .small-grid {
-    display:-ms-grid;
     display:grid;
-    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: repeat(2,1fr);
     gap: 10px;
     margin: 0 20px 0 20px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     text-align: center;
   }
 
@@ -322,62 +273,32 @@ input[type="submit"] {
   }
 }
 
-/*grid animation begins here*/
-
-@-webkit-keyframes grid-flip {
-  0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-  25% {
-    -webkit-transform: rotateZ(90deg);
-            transform: rotateZ(90deg);
-  }
-  50% {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-  }
-  75% {
-    -webkit-transform: rotateZ(270deg);
-            transform: rotateZ(270deg);
-  }
-  100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-}
+/*grid animation start*/
 
 @keyframes grid-flip {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
   }
   25% {
-    -webkit-transform: rotateZ(90deg);
-            transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
   }
   50% {
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
   }
   75% {
-    -webkit-transform: rotateZ(270deg);
-            transform: rotateZ(270deg);
+    transform: rotateZ(270deg);
   }
   100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
   }
 }
 
 .small-grid__item:hover, .small-grid__item:focus {
-  -webkit-animation: 
-      .5s grid-flip 1 normal linear;
-          animation: 
+  animation: 
       .5s grid-flip 1 normal linear;
 }
 
-/*plant animation begins here*/
+/*plant animation start*/
 
 .plant-container {
   position: relative;
@@ -386,93 +307,42 @@ input[type="submit"] {
   margin: 0 auto ;
 }
 
-@-webkit-keyframes leaf-grow {
-  0% {
-    -webkit-transform: translate(0px, 350px) rotateZ(0deg);
-            transform: translate(0px, 350px) rotateZ(0deg);
-  }
-  20% {
-    -webkit-transform: translate(0px, 280px) rotateZ(-2deg);
-            transform: translate(0px, 280px) rotateZ(-2deg);
-  }
-  30% {
-    -webkit-transform: translate(0px, 200px) rotateZ(1deg);
-            transform: translate(0px, 200px) rotateZ(1deg);
-  }
-  50% {
-    -webkit-transform: translate(0px, 120px) rotateY(10deg);
-            transform: translate(0px, 120px) rotateY(10deg);
-  }
-  75% {
-    -webkit-transform: translate(0px, 50px) rotateY(-20deg);
-            transform: translate(0px, 50px) rotateY(-20deg);
-  }
-  100% {
-    -webkit-transform: translate(0, 0px) rotateY(0deg);
-            transform: translate(0, 0px) rotateY(0deg);
-  }
-}
-
 @keyframes leaf-grow {
   0% {
-    -webkit-transform: translate(0px, 350px) rotateZ(0deg);
-            transform: translate(0px, 350px) rotateZ(0deg);
+    transform: translate(0px, 350px) rotateZ(0deg);
   }
   20% {
-    -webkit-transform: translate(0px, 280px) rotateZ(-2deg);
-            transform: translate(0px, 280px) rotateZ(-2deg);
+    transform: translate(0px, 280px) rotateZ(-2deg);
   }
   30% {
-    -webkit-transform: translate(0px, 200px) rotateZ(1deg);
-            transform: translate(0px, 200px) rotateZ(1deg);
+    transform: translate(0px, 200px) rotateZ(1deg);
   }
   50% {
-    -webkit-transform: translate(0px, 120px) rotateY(10deg);
-            transform: translate(0px, 120px) rotateY(10deg);
+    transform: translate(0px, 120px) rotateY(10deg);
   }
   75% {
-    -webkit-transform: translate(0px, 50px) rotateY(-20deg);
-            transform: translate(0px, 50px) rotateY(-20deg);
+    transform: translate(0px, 50px) rotateY(-20deg);
   }
   100% {
-    -webkit-transform: translate(0, 0px) rotateY(0deg);
-            transform: translate(0, 0px) rotateY(0deg);
+    transform: translate(0, 0px) rotateY(0deg);
   }
 }
 
 .plant {
-  -webkit-transform-origin: bottom center;
-      -ms-transform-origin: bottom center;
-          transform-origin: bottom center;
-  -webkit-animation: 
-      3s leaf-grow 1 normal linear;
-          animation: 
+  transform-origin: bottom center;
+  animation: 
       3s leaf-grow 1 normal linear;
 }
 
- /*
-  animation-duration: 8s;
-  animation-name: leaf-grow;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-timing-function: linear;
-  */
-
 .page-footer {
   clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
   .small-grid {
-    -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4,1fr);
   }
 }
@@ -495,9 +365,7 @@ input[type="submit"] {
   }
   
   .page-header__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 75px;
-            flex: 0 1 75px;
+    flex: 0 1 75px;
     height: 75px;
   }
   
@@ -525,16 +393,9 @@ input[type="submit"] {
     top: 35px;
     right: 40px;
     z-index: 3;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
    .main-navigation .navigation-list {
@@ -543,16 +404,9 @@ input[type="submit"] {
     background: #FFF8FB;
     width: 75vw;
     max-width: 300px;
-    -webkit-transform: translate(150%);
-        -ms-transform: translate(150%);
-            transform: translate(150%);
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    transition: -webkit-transform 0.5s ease-in-out;
-    -o-transition: transform 0.5s ease-in-out;
+    transform: translate(150%);
     transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-    -webkit-box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.3);
-            box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     opacity: 0.9;
   }
@@ -562,7 +416,7 @@ input[type="submit"] {
     text-align: left;
     margin-right: 0px;
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500; 
   }
   
@@ -575,57 +429,33 @@ input[type="submit"] {
   }
 
   .main-navigation .hamburger-lines .line1 {
-    -webkit-transform-origin: 0% 0%;
-        -ms-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-    -webkit-transition: -webkit-transform 0.4s ease-in-out;
-    transition: -webkit-transform 0.4s ease-in-out;
-    -o-transition: transform 0.4s ease-in-out;
+    transform-origin: 0% 0%;
     transition: transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
 
   .main-navigation .hamburger-lines .line2 {
-    -webkit-transition: -webkit-transform 0.2s ease-in-out;
-    transition: -webkit-transform 0.2s ease-in-out;
-    -o-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
-    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   }
 
   .main-navigation .hamburger-lines .line3 {
-    -webkit-transform-origin: 0% 100%;
-        -ms-transform-origin: 0% 100%;
-            transform-origin: 0% 100%;
-    -webkit-transition: -webkit-transform 0.4s ease-in-out;
-    transition: -webkit-transform 0.4s ease-in-out;
-    -o-transition: transform 0.4s ease-in-out;
+    transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
-    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
   
  .main-navigation input[type="checkbox"]:checked ~ .navigation-list {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 
   .main-navigation input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    -webkit-transform: rotate(35deg);
-        -ms-transform: rotate(35deg);
-            transform: rotate(35deg);
+    transform: rotate(35deg);
   }
 
   .main-navigation input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-    -webkit-transform: scaleY(0);
-        -ms-transform: scaleY(0);
-            transform: scaleY(0);
+    transform: scaleY(0);
   }
 
   .main-navigation input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    -webkit-transform: rotate(-35deg);
-        -ms-transform: rotate(-35deg);
-            transform: rotate(-35deg);
+    transform: rotate(-35deg);
   } 
 
   .profile__portrait {
@@ -637,23 +467,15 @@ input[type="submit"] {
   }
 
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
  }
 
  @media only screen and (max-width: 768px) {
   .profile {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     max-width: 85vw;
     margin: 3vh auto; 
@@ -669,12 +491,9 @@ input[type="submit"] {
 
  @media only screen and (min-width: 992px) {
   .contact-page-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 
   .contact-message {
@@ -690,7 +509,6 @@ input[type="submit"] {
 
  @media only screen and (min-width: 1200px) {
   .small-grid {
-    -ms-grid-columns: (1fr)[8];
     grid-template-columns: repeat(8,1fr);
   }
  }
