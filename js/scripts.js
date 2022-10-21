@@ -76,34 +76,3 @@
   emailInput.addEventListener('input', validateEmail);
   messageInput.addEventListener('input', validateMessage);
 })();
-
-// // ****** Form Submit ******
-
-document.getElementById('contact-form').addEventListener('submit', submitForm);
-//let messagesRef = firebase.database().ref('messages');
-
-function submitForm(e) {
-  e.preventDefault();
-
-  let name = getInputValue('name');
-  let email = getInputValue('email');
-  let phone = getInputValue('phone-number');
-  let message = getInputValue('message');
-
-  messageData(name, email, phone, message);
-}
-
-//get form values without repeating code
-function getInputValue(id) {
-  return document.getElementById(id).value;
-}
-
-function messageData(name, email, phone, message) {
-  let newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    name: name,
-    email: email,
-    phone: phone,
-    message, message
-  })
-}
