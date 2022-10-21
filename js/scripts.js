@@ -1,8 +1,3 @@
-// ****** Firebase ******
-
-
-//let messagesRef = firebase.database().ref('messages');
-
 // ****** Form Validation ******
 
 (function() {
@@ -85,6 +80,7 @@
 // // ****** Form Submit ******
 
 document.getElementById('contact-form').addEventListener('submit', submitForm);
+//let messagesRef = firebase.database().ref('messages');
 
 function submitForm(e) {
   e.preventDefault();
