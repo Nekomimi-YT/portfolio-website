@@ -1,11 +1,10 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set } from "firebase/database";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Portfolio Contact Form Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAJroDfiS0vd6t7zUgDy8Cyr8rDVeAJJyI",
   authDomain: "portfolio-contact-form-8413b.firebaseapp.com",
@@ -22,33 +21,97 @@ const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 const database = getDatabase(app);
 
-// ****** Form Submit ******
 
-document.getElementById('contact-form').addEventListener('submit', submitForm);
-//let messagesRef = firebase.database().ref('messages');
+// ****** Form Validation and Submit ******
 
-function submitForm(e) {
-  e.preventDefault();
+(function() {
+  let form = document.querySelector('#contact-form');
+  let emailInput = document.querySelector('#email');
+  let messageInput = document.querySelector('#message');
 
-  let name = getInputValue('name');
-  let email = getInputValue('email');
-  let phone = getInputValue('phone-number');
-  let message = getInputValue('message');
+  //Require a value and @ for validation
+  function validateEmail() {
+    let value = emailInput.value;
 
-  messageData(name, email, phone, message);
-}
+    if (!value) {
+      showErrorMessage(emailInput, 'Email is a required field.');
+      return false;
+    }
 
-//get form values without repeating code
-function getInputValue(id) {
-  return document.getElementById(id).value;
-}
+    if (value.indexOf('@') === -1) {
+      showErrorMessage(emailInput, 'You must enter a valid email address.');
+      return false;
+    }
 
-function messageData(name, email, phone, message) {
-  let newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    name: name,
-    email: email,
-    phone: phone,
-    message, message
-  })
-}
+    showErrorMessage(emailInput, null);
+      return true;
+  }
+
+  //Require a textarea value for validation
+  function validateMessage() {
+    let value = messageInput.value;
+
+    if (!value) {
+      showErrorMessage(messageInput, 'Message is a required field.');
+      return false;
+    }
+    showErrorMessage(messageInput, null);
+    return true;
+  }
+
+  function showErrorMessage(input, message) {
+    let container = input.parentElement; // contact-form__item
+
+    // Remove an existing error
+    let error = container.querySelector('.error-message');
+    if (error) {
+      container.removeChild(error);
+    }
+
+    // Add an error if the message isn’t empty
+    if (message) {
+      let error = document.createElement('div');
+      error.classList.add('error-message');
+      error.innerText = message;
+      container.appendChild(error);
+    }
+  }
+  
+  //Both return statments must be true for this function to be true
+  function validateForm() {
+    let isValidEmail = validateEmail();
+    let isValidMessage = validateMessage();
+    return validateEmail() && validateMessage();
+  }
+  
+  //need true or false returned to know if the submission is valid
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Do not submit to the server yet
+    if (validateForm()) {
+      let name = getInputValue('name');
+      let email = getInputValue('email');
+      let phone = getInputValue('phone-number');
+      let message = getInputValue('message');
+      writeNewMessage(name, email, phone, message);
+      alert('Message sent!!');
+      }
+    });
+
+  //get form values without repeating code
+  function getInputValue(id) {
+    return document.getElementById(id).value;
+  }
+
+  function writeNewMessage(name, email, phone, message) {
+    set(ref(database, 'New Message from: ' + name), {
+      name: name,
+      email: email,
+      phone: phone,
+      message, message
+    })
+  }
+
+  //Event listeners to activate validation functions
+  emailInput.addEventListener('input', validateEmail);
+  messageInput.addEventListener('input', validateMessage);
+})();
