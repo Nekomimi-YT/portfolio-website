@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Nekomimi-YT/portfolio-website#readme",
   "dependencies": {
-    "firebase": "^9.12.1"
+    "firebase": "^9.12.1",
+    "parcel": "^2.7.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
   }
 }
