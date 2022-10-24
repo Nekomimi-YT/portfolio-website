@@ -1,3 +1,5 @@
+//first node version: v16.15.1 (LTS Gallium)
+
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set } from "firebase/database";
 
