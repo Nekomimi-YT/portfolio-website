@@ -1,20 +1,21 @@
 //first node version: v16.15.1 (LTS Gallium)
 
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, set } from 'firebase/database';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Portfolio Contact Form Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAJroDfiS0vd6t7zUgDy8Cyr8rDVeAJJyI",
-  authDomain: "portfolio-contact-form-8413b.firebaseapp.com",
-  databaseURL: "https://portfolio-contact-form-8413b-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "portfolio-contact-form-8413b",
-  storageBucket: "portfolio-contact-form-8413b.appspot.com",
-  messagingSenderId: "688561707815",
-  appId: "1:688561707815:web:874e6fe8bbe6d39d77e702"
+  apiKey: '1234',
+  authDomain: 'portfolio-contact-form-8413b.firebaseapp.com',
+  databaseURL:
+    'https://portfolio-contact-form-8413b-default-rtdb.europe-west1.firebasedatabase.app',
+  projectId: 'portfolio-contact-form-8413b',
+  storageBucket: 'portfolio-contact-form-8413b.appspot.com',
+  messagingSenderId: '688561707815',
+  appId: '1:688561707815:web:874e6fe8bbe6d39d77e702'
 };
 
 // Initialize Firebase
@@ -23,10 +24,9 @@ const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 const database = getDatabase(app);
 
-
 // ****** Form Validation and Submit ******
 
-(function() {
+(function () {
   let form = document.querySelector('#contact-form');
   let emailInput = document.querySelector('#email');
   let messageInput = document.querySelector('#message');
@@ -46,7 +46,7 @@ const database = getDatabase(app);
     }
 
     showErrorMessage(emailInput, null);
-      return true;
+    return true;
   }
 
   //Require a textarea value for validation
@@ -78,14 +78,14 @@ const database = getDatabase(app);
       container.appendChild(error);
     }
   }
-  
+
   //Both return statments must be true for this function to be true
   function validateForm() {
     let isValidEmail = validateEmail();
     let isValidMessage = validateMessage();
     return validateEmail() && validateMessage();
   }
-  
+
   //need true or false returned to know if the submission is valid
   form.addEventListener('submit', (e) => {
     e.preventDefault(); // Do not submit to the server yet
@@ -96,8 +96,8 @@ const database = getDatabase(app);
       let message = getInputValue('message');
       writeNewMessage(name, email, phone, message);
       alert('Message sent!!');
-      }
-    });
+    }
+  });
 
   //get form values without repeating code
   function getInputValue(id) {
@@ -109,8 +109,9 @@ const database = getDatabase(app);
       name: name,
       email: email,
       phone: phone,
-      message, message
-    })
+      message,
+      message
+    });
   }
 
   //Event listeners to activate validation functions
