@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Nekomimi-YT/portfolio-website#readme",
   "dependencies": {
     "firebase": "^9.12.1",
+    "gh-pages": "^4.0.0",
     "parcel": "^2.7.0"
   },
   "devDependencies": {
