@@ -2,13 +2,15 @@
 
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set } from 'firebase/database';
+import * as dotenv from 'dotenv'
+dotenv.config();
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Portfolio Contact Form Firebase configuration
 const firebaseConfig = {
-  apiKey: '1234',
+  apiKey: 'process.env.FIREBASE_APIKEY', //'AIzaSyAJroDfiS0vd6t7zUgDy8Cyr8rDVeAJJyI',
   authDomain: 'portfolio-contact-form-8413b.firebaseapp.com',
   databaseURL:
     'https://portfolio-contact-form-8413b-default-rtdb.europe-west1.firebasedatabase.app',
