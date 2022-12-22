@@ -21,11 +21,14 @@
   },
   "homepage": "https://github.com/Nekomimi-YT/portfolio-website#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "firebase": "^9.12.1",
     "gh-pages": "^4.0.0",
     "parcel": "^2.7.0"
   },
   "devDependencies": {
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
     "process": "^0.11.10"
   }
 }
