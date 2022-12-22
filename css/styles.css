@@ -280,7 +280,7 @@ background-color: var(--background-color);
   box-shadow: 0 10px 10px 0 var(--box-shadow-color);
 }
 
-.schnacker-image {
+.nolink-image {
   max-width: 200px;
   border-radius: var(--grid-border-radius);
   box-shadow: 0 10px 20px 0 var(--box-shadow-color);
