@@ -40,8 +40,8 @@ h1 {
 
 .h1__indent {
   text-align: center;
-  padding-bottom: 25px;
-  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 h2 {
@@ -231,12 +231,13 @@ input[type='submit'] {
   background-color: var(--secondary-compliment-color);
 }
 
-/*use this class again and change the name if other single buttons are added*/
+/*use this class for any single buttons added
 .cv-button {
   padding: var(--standard-element-padding);
   text-align: center;
   margin: 15px 0 10px 0;
 }
+*/
 
 @supports (display: grid) {
   .grid {
@@ -297,13 +298,34 @@ input[type='submit'] {
   align-self: center;
 }
 
+.about-container {
+  background-color: var(--background-color);
+  box-shadow: 0 0 20px 0 var(--primary-color);
+  border-radius: var(--grid-border-radius);
+  background-color: var(--background-color);
+  box-shadow: 0 0 20px 0 var(--primary-color);
+  border-radius: var(--grid-border-radius);
+  padding: var(--standard-element-padding);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  margin: auto;
+  max-width: 80%;
+  line-height: 1.15;
+}
+
 /*plant animation */
 
 .plant-container {
   position: relative;
   text-align: center;
   width: 250px;
-  margin: 0 auto;
+  height: 175px;
+  padding-top: 30px;
+  margin: auto;
 }
 
 @keyframes leaf-grow {
@@ -339,7 +361,9 @@ input[type='submit'] {
   text-align: center;
 }
 
-.project-page-footer, .contact-page-footer, .index-page-footer {
+.project-page-footer,
+.contact-page-footer,
+.index-page-footer {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -372,7 +396,6 @@ input[type='submit'] {
 }
 
 @media only screen and (max-width: 768px) {
-
   .page-header__menu {
     margin-right: 0px;
   }
