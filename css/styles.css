@@ -40,8 +40,8 @@ h1 {
 
 .h1__indent {
   text-align: center;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: var(--standard-element-padding);
+  padding-top: var(--standard-element-padding);
 }
 
 h2 {
