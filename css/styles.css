@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #607d8b; /*#3E7C00;*/
-  --secondary-color: #37474f; /* #9B0E40;*/
-  --compliment-color: #455a64; /*#817277;*/
-  --secondary-compliment-color: #b0bec5; /*#E6DEE1;*/
-  --text-color: #000000; /* #1E3B00; */
+  --primary-color: #607d8b;
+  --secondary-color: #37474f;
+  --compliment-color: #455a64;
+  --secondary-compliment-color: #b0bec5;
+  --text-color: #000000;
   --background-color: #fdfdfd;
   --a-color__active: #3a0014;
   --box-shadow-color: #37474f;
@@ -58,10 +58,6 @@ a {
   transition: font-size 0.7s, font-weight 0.7s;
 }
 
-/*a:visited {
-  color: var(--compliment-color);
-}*/
-
 a:hover,
 a:focus {
   font-size: 20px;
@@ -72,7 +68,7 @@ a:active {
   color: var(--a-color__active);
 }
 
-/* to cancel the effects of the <a> transition on buttons*/
+/* to cancel the effects of the <a> transition on buttons */
 .a__button {
   font-size: var(--body-font-size) !important;
   font-weight: 400 !important;
@@ -110,7 +106,7 @@ a:active {
 .page-header__menu {
   flex-grow: 1;
   justify-content: right;
-  align-items: center; /*Centers the nav menu with the logo photo*/
+  align-items: center; /* Centers the nav menu with the logo photo */
   margin-right: 50px;
 }
 
@@ -231,14 +227,6 @@ input[type='submit'] {
   background-color: var(--secondary-compliment-color);
 }
 
-/*use this class for any single buttons added
-.cv-button {
-  padding: var(--standard-element-padding);
-  text-align: center;
-  margin: 15px 0 10px 0;
-}
-*/
-
 @supports (display: grid) {
   .grid {
     display: grid;
@@ -318,7 +306,6 @@ input[type='submit'] {
 }
 
 /*plant animation */
-
 .plant-container {
   position: relative;
   text-align: center;
@@ -510,7 +497,7 @@ input[type='submit'] {
     flex-direction: column;
   }
 
-  /*added for non-form page: remove! */
+  /* added for non-form page: remove! */
   .contact-page-container {
     max-width: 90%;
   }
@@ -555,8 +542,9 @@ input[type='submit'] {
   }
 
   @media only screen and (min-width: 1260px) {
-    /* Add in when form is back */
-    /*.contact-page-container {
+    /* Add in when form is functioning
+
+    /* .contact-page-container {
     display: flex;
     height: 100%;
     justify-content: space-around;
