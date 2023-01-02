@@ -313,7 +313,7 @@ input[type='submit'] {
   text-align: center;
   height: auto;
   margin: auto;
-  max-width: 80%;
+  max-width: 65%;
   line-height: 1.15;
 }
 
@@ -392,6 +392,10 @@ input[type='submit'] {
 @media all and (max-width: 1000px) {
   .grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-container {
+    max-width: 75%;
   }
 }
 
@@ -543,6 +547,10 @@ input[type='submit'] {
 
     .grid__item {
       flex-wrap: wrap;
+    }
+
+    .about-container {
+      max-width: 90%;
     }
   }
 
